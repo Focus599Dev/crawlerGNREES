@@ -1,0 +1,16 @@
+{
+    "name": "root/crawler-gnrees",
+    "description": "Crawler para pegar o boleto do site GNRE ES",
+    "type": "library",
+    "require": {
+        "mpdf/mpdf": "v7.1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marlon O. Barbosa",
+            "email": "marlon.academi@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
