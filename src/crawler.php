@@ -1,6 +1,6 @@
 <?php 
 
-namespace Focus599Dev\Crawler;
+namespace Focus599Dev\CrawlerES;
 
 use Mpdf\Mpdf;
 use DOMDocument;

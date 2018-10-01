@@ -16,7 +16,7 @@
         "php": ">=5.6"
     },
     "psr-4": {
-        "Focus599Dev\\": "src/"
+        "Focus599Dev\\CrawlerES\\": "src/"
     },
     "minimum-stability":"stable"
 }

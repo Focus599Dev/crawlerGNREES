@@ -2,7 +2,7 @@
 
 include ('crawler.php');
 
-include ('vendor/autoload.php');		
+include ('../vendor/autoload.php');		
 
 $data = array(
 	"cnpj" 			=> '10464223000163',
@@ -27,7 +27,7 @@ $data = array(
 );
 
 
-$cw = new Focus599Dev\Crawler\Crawler($data);
+$cw = new Focus599Dev\CrawlerES\Crawler($data);
 
 $cw->getBoleto();
 
