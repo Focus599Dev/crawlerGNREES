@@ -222,13 +222,13 @@ class Crawler{
 
 	private function replaceImagesToBase64(){
 
-		$linhaP = base64_encode(file_get_contents('images/2.gif'));
+		$linhaP = base64_encode(file_get_contents(realpath(__DIR__ . '/../images') . '/2.gif'));
 
-		$linhaB = base64_encode(file_get_contents('images/1.gif'));
+		$linhaB = base64_encode(file_get_contents(realpath(__DIR__ . '/../images') . '/1.gif'));
 
-		$logoES = base64_encode(file_get_contents('images/governo_peq.gif'));
+		$logoES = base64_encode(file_get_contents(realpath(__DIR__ . '/../images') . '/governo_peq.gif'));
 
-		$tesoura = base64_encode(file_get_contents('images/tesoura2.gif'));
+		$tesoura = base64_encode(file_get_contents(realpath(__DIR__ . '/../images') . '/tesoura2.gif'));
 
 		$this->text_html = preg_replace('/\/imagens\/2.gif/', 'data:image/gif;base64,' . $linhaP , $this->text_html); 
 
@@ -346,7 +346,7 @@ class Crawler{
 		
 		$file = $this->makeRandomString() . '.pdf';
 
-		$folder = 'pdf/';
+		$folder = realpath(__DIR__ . '/../pdf');
 
 		$dom = new DOMDocument;
 
@@ -372,9 +372,9 @@ class Crawler{
 
 		$mpdf->WriteHTML($dom->saveHTML());
 
-		$this->filePDF = $folder . $file;
+		$this->filePDF = $folder . '/' . $file;
 
-		$mpdf->Output($folder . $file, 'F');
+		$mpdf->Output($folder . '/' . $file, 'F');
 
 	}
 
@@ -413,7 +413,7 @@ class Crawler{
 		try {
 
 			if (is_file($this->filePDF)){
-				
+
 				copy($this->filePDF, $pathTo);
 
 				unlink($this->filePDF);
