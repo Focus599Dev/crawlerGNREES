@@ -323,7 +323,8 @@ class Crawler{
 	}
 
 	private function logError($message){
-		return file_put_contents('log/log.txt', date('d/m/Y H:i:s') . ' ' . $message . PHP_EOL, FILE_APPEND);
+
+		return file_put_contents(realpath(__DIR__ . '/../log') . '/log.txt', date('d/m/Y H:i:s') . ' ' . $message . PHP_EOL, FILE_APPEND);
 	}
 
 	private function fillPost ($post){
